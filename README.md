@@ -1,5 +1,12 @@
 # 🚀 Builders Skill Sprint: AI Agents Challenge
 
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
+![AWS Bedrock](https://img.shields.io/badge/AWS-Bedrock-orange?logo=amazonaws)
+![Nova Pro](https://img.shields.io/badge/Model-Nova%20Pro-purple)
+![Strands SDK](https://img.shields.io/badge/Framework-Strands%20SDK-teal)
+![MCP](https://img.shields.io/badge/Protocol-MCP-red)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 Welcome to my portfolio of submissions for the **AWS User Group Madurai – Nova Month Challenge**. This repository chronicles my journey of building modern, capable AI agents from the ground up using cutting-edge AWS Generative AI technologies.
 
 ### 🛠️ Core Tech Stack
@@ -13,15 +20,42 @@ The challenge was structured as a progressive learning path, focusing on buildin
 
 ---
 
+# ⚡ Quick Start
+
+### Prerequisites
+Before running any challenge, make sure you have:
+- **Python 3.10+** installed
+- **AWS Account** with Amazon Bedrock access (`us.amazon.nova-pro-v1:0` model enabled)
+- **Node.js 18+** installed — required for MCP servers ([nodejs.org](https://nodejs.org/))
+- **AWS CLI** configured with your credentials:
+  ```bash
+  aws configure
+  ```
+
+### Running the Highlight Project (Challenge 5)
+```bash
+# Install Python dependencies
+pip install strands-agents mcp
+
+# Navigate to the challenge directory
+cd Challenge-5
+
+# Run the Automated Researcher
+python starter.py
+```
+> No additional API keys required! The DuckDuckGo MCP server is completely free.
+
+---
+
 # 📚 Challenges Completed
 
 | Challenge | Title | Core Technologies |
 | :--- | :--- | :--- |
-| **Challenge-1** | 🐣 First AI Agent | Ollama, Strands SDK |
-| **Challenge-2** | 🛠️ AI Agent with Tools | Bedrock, Nova Pro, Custom Tool Calling (`wttr.in`, `datetime`) |
-| **Challenge-3** | 🧠 Persistent Memory Agent | mem0, FAISS |
-| **Challenge-4** | 🌊 Full AI Agent | Streaming, Memory, Tools |
-| **Challenge-5** | 🔎 The Automated Researcher | MCP (DuckDuckGo, Filesystem), Bedrock, Nova Pro |
+| [**Challenge-1**](./Challenge-1/) | 🐣 First AI Agent | Ollama, Strands SDK |
+| [**Challenge-2**](./Challenge-2/) | 🛠️ AI Agent with Tools | Bedrock, Nova Pro, Custom Tool Calling (`wttr.in`, `datetime`) |
+| [**Challenge-3**](./Challenge-3/) | 🧠 Persistent Memory Agent | mem0, FAISS |
+| [**Challenge-4**](./Challenge-4/) | 🌊 Full AI Agent | Streaming, Memory, Tools |
+| [**Challenge-5**](./Challenge-5/) | 🔎 The Automated Researcher | MCP (DuckDuckGo, Filesystem), Bedrock, Nova Pro |
 
 ---
 
@@ -41,7 +75,7 @@ Through this intensive skill sprint, I gained profound hands-on experience in th
 
 # 🌟 Highlight Project — The Automated Researcher 🔎📂
 
-The capstone project of this challenge was **The Automated Researcher**, a fully functional AI-powered personal research assistant. 
+The capstone project of this challenge was **The Automated Researcher**, a fully functional AI-powered personal research assistant.
 
 Unlike traditional LLM chats, this agent autonomously browses the web, synthesizes information, and manages its own filesystem.
 
@@ -51,6 +85,18 @@ Provide the agent with a topic (e.g., *"Research quantum computing for beginners
 1.  Search the live web for the most up-to-date information.
 2.  Synthesize the scattered findings into a cohesive, structured markdown study guide.
 3.  Automatically save the guide directly to your local machine in a dedicated `research_notes/` directory.
+
+## 🗺️ Architecture & Flow
+
+```mermaid
+graph LR
+    A[👤 User Query] --> B[🧠 Nova Pro Agent]
+    B --> C[🔌 DuckDuckGo MCP Server]
+    C --> D[🌐 Web Results]
+    D --> B
+    B --> E[🔌 Filesystem MCP Server]
+    E --> F[📂 research_notes/*.md]
+```
 
 ## 🚀 Capabilities
 
@@ -89,11 +135,17 @@ builders-skill-sprint-challenges/
 
 # 🏆 Challenge Submission
 
-Built for the **AWS User Group Madurai — Nova Month Challenge**.
+| Field | Details |
+| :--- | :--- |
+| **Event** | AWS User Group Madurai — Nova Month Challenge |
+| **Submission** | Builders Skill Sprint: AI Agents |
+| **Capstone Project** | The Automated Researcher (Challenge 5) |
+| **Core Model** | Amazon Nova Pro (`us.amazon.nova-pro-v1:0`) |
+| **Submission Portal** | [awsugmdu.in](https://www.awsugmdu.in/) |
 
 ---
 
-# 🚀 Future Goals
+# 🔭 Future Goals
 
 Moving forward, I plan to expand on these foundations to explore:
 
