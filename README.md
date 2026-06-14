@@ -5,6 +5,7 @@
 ![Nova Pro](https://img.shields.io/badge/Model-Nova%20Pro-purple)
 ![Strands SDK](https://img.shields.io/badge/Framework-Strands%20SDK-teal)
 ![MCP](https://img.shields.io/badge/Protocol-MCP-red)
+![DuckDuckGo](https://img.shields.io/badge/Search-DuckDuckGo-de5833?style=flat&logo=duckduckgo)
 
 Welcome to my portfolio of submissions for the **AWS User Group Madurai – Nova Month Challenge**. This repository chronicles my journey of building modern, capable AI agents from the ground up using cutting-edge AWS Generative AI technologies.
 
